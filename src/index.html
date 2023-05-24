@@ -10,13 +10,30 @@
         <h1>{{ title }}</h1> 
         <p>Esta é a minha página inicial.</p> 
 
-        <registration-student></registration-studen>
+        <div ng-controller="RadioController">
+            <div ng-repeat="option in options">
+              <label>
+                <input type="radio" ng-model="$parent.optionSelect" ng-value="option">
+                {{ option.name }}
+              </label>
+            </div>
+                        
+            <div ng-if="optionSelect.value === 'student'">
+                <registration-student></registration-student>
+            </div>
+            
+            <div ng-if="optionSelect.value === 'teacher'">
+                <p>Opção 2 selecionada!</p>
+            </div>
+          </div>
+          
     </div>
 
 
     <script src="../src/scripts/app.js"></script>
     <script src="../src/scripts/controllers/home.js"></script>
     <script src="../src/scripts/controllers/student.js"></script>
+    <script src="../src/scripts/controllers/optionRegistration.js"></script>
     <script src="../src/scripts/directives/registration.js"></script>
 </body>
 </html>
