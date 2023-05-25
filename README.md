@@ -3,8 +3,8 @@
 Disable cache (No navegador)
 
 Executar no prompt: 
-    npm install
-    http-server
+  - npm install
+  - http-server
 
 localhost:8080/src/
 
