@@ -1,11 +1,14 @@
 ## APP ANGULARJS 1.7.9
 
-Disable cache (No navegador)
+# Disable cache 
+  Disabilitar cache no navegador
 
-Executar no prompt: 
+# Executar projeto
   - npm install
   - http-server
 
-localhost:8080/
+# Link 
+  http://localhost:8080/app/#!/
 
-Em caso de Erro executar "Set-ExecutionPolicy RemoteSigned -Scope Process" no prompt
+# Em caso de Erro executar:
+  - Set-ExecutionPolicy RemoteSigned -Scope Process
