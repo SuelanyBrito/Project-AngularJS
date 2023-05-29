@@ -6,6 +6,6 @@ Executar no prompt:
   - npm install
   - http-server
 
-localhost:8080/src/
+localhost:8080/
 
 Em caso de Erro executar "Set-ExecutionPolicy RemoteSigned -Scope Process" no prompt
