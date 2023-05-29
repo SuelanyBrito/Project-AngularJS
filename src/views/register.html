@@ -1,0 +1,16 @@
+<div ng-controller="RadioController">
+    <div ng-repeat="option in options">
+      <label>
+        <input type="radio" ng-model="$parent.optionSelect" ng-value="option">
+        {{ option.name }}
+      </label>
+    </div>
+
+    <div ng-if="optionSelect.value === 'student'">
+        <registration-student></registration-student>
+    </div>
+    
+    <div ng-if="optionSelect.value === 'teacher'">
+        <registration-teacher></registration-teacher>
+    </div>
+</div>

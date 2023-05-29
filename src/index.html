@@ -3,31 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
 </head>
 <body ng-app="myApp" class="main">
-    <div ng-controller="HomeController"> 
-        <h1>{{ title }}</h1> 
-        <p>Esta é a minha página inicial.</p> 
-
-        <div ng-controller="RadioController">
-            <div ng-repeat="option in options">
-              <label>
-                <input type="radio" ng-model="$parent.optionSelect" ng-value="option">
-                {{ option.name }}
-              </label>
-            </div>
-
-            <div ng-if="optionSelect.value === 'student'">
-                <registration-student></registration-student>
-            </div>
-            
-            <div ng-if="optionSelect.value === 'teacher'">
-                <registration-teacher></registration-teacher>
-            </div>
-          </div>
-          
-    </div>
+  <div ng-view></div>
 
 
     <script src="../src/scripts/app.js"></script>
