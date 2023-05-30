@@ -2,22 +2,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
 </head>
+
 <body ng-app="myApp" class="main">
   <div ng-view></div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../app/app.js"></script>
-    <script src="../app/features/home/home.js"></script>
-    <script src="../app/features/student/student.js"></script>
-    <script src="../app/features/login/login.js"></script>
-    <script src="../app/features/teacher/teacher.js"></script>
-    <script src="../app/features/register/register.js"></script>
-    <script src="../app/features/teacher/directives/registration_teacher.js"></script>
-    <script src="../app/features/student/directives/registration_student.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/features/home/home.js"></script>
+    <script src="./app/features/student/student.js"></script>
+    <script src="./app/features/login/login.js"></script>
+    <script src="./app/features/teacher/teacher.js"></script>
+    <script src="./app/features/register/register.js"></script>
+    <script src="./app/features/teacher/directives/registration_teacher.js"></script>
+    <script src="./app/features/student/directives/registration_student.js"></script>
 </body>
 </html>

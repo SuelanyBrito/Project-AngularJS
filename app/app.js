@@ -3,16 +3,16 @@ const app = angular.module('myApp', ['ngRoute']);
 app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'features/home/home.html',
+        templateUrl: './app/features/login/login.html',
+        controller: 'LoginController'
+      })
+      .when('/home', {
+        templateUrl: './app/features/home/home.html',
         controller: 'HomeController'
       })
       .when('/register', {
-        templateUrl: 'features/register/register.html',
+        templateUrl: './app/features/register/register.html',
         controller: 'RadioController'
-      })
-      .when('/login', {
-        templateUrl: 'register/login.html',
-        controller: 'LoginController'
       })
       .otherwise({
         redirectTo: '/'

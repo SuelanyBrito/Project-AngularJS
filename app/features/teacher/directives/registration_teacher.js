@@ -1,7 +1,7 @@
 app.directive('registrationTeacher', function () {
     return {
       restrict: 'E',
-      templateUrl: 'features/teacher/directives/registration-teacher.html',
+      templateUrl: './app/features/teacher/directives/registration-teacher.html',
       controller: 'TeacherController'
     };
   });

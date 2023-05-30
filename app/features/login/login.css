@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-right: 0px !important;
+}
+
+.login-container{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-container .logodell{
+  height: 46px;
+  margin-right: 10px;
+}
+
+.logo-container .dellname{
+  height: 40px;
+}
+
+.form {
+  flex-direction: column;
+  display: flex;
+}
+
+input {
+  margin-top: 2rem;
+  
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #7E7E7E;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 25px;
+  height: 32px;
+}
+
+.wallpaper {
+  height: 100%;
+  width: 60%;
+  background-image: url("../../assets/images/imgdell.png");
+  background-size: cover;
+}
+
+#nav-bnt {
+  border: 0px;
+  background: white;
+  color: blue;
+  margin-top: 10px;
+  cursor: pointer;
+} 

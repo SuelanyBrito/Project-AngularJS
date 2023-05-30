@@ -1,4 +1,24 @@
-<div ng-controller="LoginController"> 
-    <h1>{{ title }}</h1> 
-    <p>Esta é a minha página inicial.</p> 
+<link rel="stylesheet" href="./app/features/login/login.css">
+
+<div ng-controller="LoginController" class="container">
+    <div class="login-container">
+        <div class="logo-container">
+            <img class="logodell" src="./app/assets/images/logo.png"/>
+            <img class="dellname" src="./app/assets/images/dellname.png" />
+        </div>
+
+        <div class="login-form">
+            <form class="form">
+                <input type="text" ng-model="username" placeholder="Username" required />
+                <input type="password" ng-model="password" placeholder="********" required />
+            </form>
+            <button class="btn btn-primary" ng-click="login()">Login</button>
+        </div>
+        <button type="button" ng-click="register()" id="nav-bnt">
+            Sign up for an account
+          </button>
+    </div>
+
+    <div class="wallpaper">
+    </div>
 </div>
