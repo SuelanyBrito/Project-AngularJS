@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "angular": "^1.7.9",
-    "angular-route": "^1.7.9"
+    "angular-route": "^1.7.9",
+    "jquery": "^3.7.0",
+    "node": "^20.2.0"
   }
 }
