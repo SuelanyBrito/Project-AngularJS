@@ -1,0 +1,35 @@
+.custom-input {
+    margin-top: 2rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #7E7E7E;
+    border-radius: 2px;
+}
+
+#nav-bnt {
+    border: 0px;
+    background: white;
+    color: blue;
+    margin-top: 10px;
+    cursor: pointer;
+} 
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.btn-primary {
+    width: 100%;
+    margin-top: 25px;
+    height: 32px;
+}
