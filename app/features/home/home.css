@@ -1,0 +1,85 @@
+.body{
+    /* position: sticky; */
+    width: 100%;
+    height: 100vh;
+    background: #E1E1E1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr 20fr;
+    grid-template-areas: 
+        "header header"
+        "nav path"
+        "nav content"
+    ;
+}
+
+.head{ 
+    /* position: sticky; */
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.logo-dellname{
+    width: 195.22px;
+    height: 56px;
+  }
+
+.search{
+    box-sizing: border-box;
+
+    width: 428.78px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #B6B6B6;
+    border-radius: 2px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.icon-search{
+    /* position: absolute; */
+    left: 66%;
+    right: -0.25%;
+    top: 30%;
+    bottom: 0%;
+    opacity: 0.5;
+}
+
+.container{
+    /* box-sizing: border-box; */
+    /* position: relative; */
+    grid-area: content;
+    width: 100%;
+    height: 100%;
+    top: 40px;
+    left: 1%;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+}
+
+.side-nav{
+    grid-area: nav;
+    gap: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* position: relative; */
+    width: 100%;
+    /* height: 100px; */
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.side-nav svg {
+    height: 4rem;
+    width: 4rem;
+}
+
+.path {
+    grid-area: path;
+}
