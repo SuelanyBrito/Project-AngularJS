@@ -1,5 +1,13 @@
-app.controller('StudentController', function ($scope) { 
+app.controller('StudentController', ['$scope', '$location', function ($scope, $location) { 
     $scope.students = []; 
+
+    $scope.home = function () {
+      $location.path('/home');
+    };
+    
+    $scope.login = function () {
+      $location.path('/login');
+    };
     
     $scope.registrationStudent = function () {
         // Lógica para cadastrar um novo aluno
@@ -17,4 +25,4 @@ app.controller('StudentController', function ($scope) {
         $scope.password = '';
         $scope.education = '';
       };
-});
+}]);

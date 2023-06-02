@@ -1,21 +1,18 @@
+<link rel="stylesheet" href="./app/features/student/directives/registration_student.css">
+
 <div>
-    <h3>Student Registration</h3>
     <form ng-submit="registrationStudent()">
-      <label>Full Name</label>
-      <input type="text" ng-model="name" required>
-  
-      <label>Email:</label>
-      <input type="text" ng-model="email" required>
-  
-      <label>Password:</label>
-      <input type="text" ng-model="password" required>
+      <div class="form"> 
+        <input type="text" class="custom-input" ng-model="name" placeholder="Full Name" required>
+        <input type="text" class="custom-input" ng-model="email" placeholder="Email" required>
+        <input type="password" class="custom-input" ng-model="password" placeholder="Password" required>
+        <input type="password" class="custom-input" ng-model="confirm_password" placeholder="Confirm Password" required>
+        <input type="text" class="custom-input" ng-model="occupation" placeholder="Occupation" required>
+        <input type="text" class="custom-input" ng-model="formation" placeholder="Formation" required>
+        
+        <button class="btn btn-primary" ng-click="home()">Create Account</button>
+      </div>
 
-      <label>Occupation:</label>
-      <input type="text" ng-model="occupation" required>
-
-      <label>Formation:</label>
-      <input type="text" ng-model="formation" required>
-  
-      <button type="submit">Create Account</button>
+      <button type="submit" ng-click="login()" id="nav-bnt">Back to login</button>
     </form>
 </div>

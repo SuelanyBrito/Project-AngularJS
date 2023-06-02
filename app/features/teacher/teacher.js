@@ -1,5 +1,13 @@
-app.controller('TeacherController', function ($scope) { 
+app.controller('TeacherController', ['$scope', '$location', function ($scope, $location) { 
     $scope.teachers = []; 
+
+    $scope.home = function () {
+      $location.path('/home');
+    };
+    
+    $scope.login = function () {
+      $location.path('/login');
+    };
     
     $scope.registrationTeacher = function () {
         // Lógica para cadastrar um novo aluno
@@ -19,4 +27,4 @@ app.controller('TeacherController', function ($scope) {
         $scope.occupation = '';
         $scope.formation = '';
       };
-});
+}]);
