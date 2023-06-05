@@ -1,8 +1,12 @@
-.body{
-    /* position: sticky; */
+ * {
+    margin: 0;
+ }
+ 
+ .body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #E1E1E1;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr 20fr;
@@ -13,22 +17,22 @@
     ;
 }
 
-.head{ 
-    /* position: sticky; */
+.head { 
     grid-area: header;
     width: 100%;
-    height: 100%;
+    height: 85%;
     background: #FFFFFF;
 }
 
-.logo-dellname{
-    width: 195.22px;
-    height: 56px;
+.logo-dellname {
+    position: relative;
+    width: 10%;
+    height: 90%;
+    top: 10%
   }
 
-.search{
+.search {
     box-sizing: border-box;
-
     width: 428.78px;
     height: 32px;
     background: #FFFFFF;
@@ -37,30 +41,64 @@
     flex: none;
     order: 1;
     flex-grow: 1;
+    position: relative;
+    bottom: 30%;
+
 }
 
-.icon-search{
-    /* position: absolute; */
-    left: 66%;
-    right: -0.25%;
-    top: 30%;
-    bottom: 0%;
-    opacity: 0.5;
+.icon-search {
+    position: relative;
+    bottom: 20%;
+    right: 45px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
-.container{
-    /* box-sizing: border-box; */
-    /* position: relative; */
+.container {
+    position: relative;
     grid-area: content;
-    width: 100%;
-    height: 100%;
-    top: 40px;
+    width: 98%;
+    height: 94.5%;
+    bottom: 0.4%;
     left: 1%;
     background: #FFFFFF;
     border: 1px solid #E1E1E1;
 }
 
-.side-nav{
+.container .card {
+    position: relative;
+    width: 18%;
+    height: 20%;
+    top: 20px;
+    left: 20px;
+    border: 1px solid #E1E1E1;
+    background-color: #FFFFFF;
+}
+
+.container .card .icon {
+    position: relative;
+    width: 39px;
+    height: 50.47px;
+    left: 40px;
+}
+
+.container .card .project-listing {
+    position: relative;
+    top: 40px;
+    right: 30px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #0E0E0E;
+
+}
+
+
+.side-nav {
+    position: relative;
     grid-area: nav;
     gap: 1rem;
     flex: 1;
@@ -68,18 +106,67 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    /* position: relative; */
     width: 100%;
-    /* height: 100px; */
-    height: 100%;
+    height: 100.9%;
+    bottom: 1%;
     background: #FFFFFF;
 }
 
 .side-nav svg {
-    height: 4rem;
-    width: 4rem;
+    width: 30px;
+    height: 28px;
+    padding: 10px;
+}
+
+.side-nav .home{
+    background-color: #E1E1E1;
+}
+
+.side-nav .expand{
+    position: relative;
+    top: 730px;
+    background-color: #FFFFFF;
 }
 
 .path {
+    position: relative;
     grid-area: path;
+    height: 2rem;
+    bottom: 20%;
+} 
+.path .home-page {
+    position: relative;
+    width: 20%;
+    top: 12px;
+    left: 2%;
+} 
+
+.path .home-page .page {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #0E0E0E;
+} 
+
+.icon-user { 
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    left: 55%;
+    bottom: 30%;
+}
+
+.user{
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #636363;
+}
+
+button {
+    cursor: pointer;
 }
