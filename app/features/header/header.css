@@ -1,6 +1,27 @@
-.header {
-    background-color: #f2f2f2;
-    padding: 10px;
-    /* outros estilos */
-  }
+.header-container{
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.search-container {
+  width: 30%;
+}
+
+.search-container input {
+  width: 100%;
+}
+
+.icon-user {
+  padding-right: 20px;
+}
+
+.dds__icon--chevron-down {
+  cursor: pointer;
+}
   

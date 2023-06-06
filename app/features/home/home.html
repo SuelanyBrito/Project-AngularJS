@@ -1,28 +1,18 @@
 <link rel="stylesheet" href="./app/features/home/home.css">
 
-<div ng-controller="HomeController" class="body"> 
+<div class="breadcrumb">
+    <ol> 
+        <i class="dds__icon dds__icon--home">
+            <a>/Home</a>
+        </i> 
+    </ol>
+</div>
 
-    <div class="path">
-        <div class="home-page">
-            <svg class="home" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 9.08189L14.33 7.28311L8 0.469879L1.7 7.25297L0 9.08189L0.74 9.78532L1.66 8.78042V15.8147H6.52V10.1471H9.52V15.8348H14.37V8.80052L15.3 9.80542L16.05 9.10199L16 9.08189ZM13.31 14.7797H10.49V9.14218H5.49V14.8299H2.68V7.79561L8 1.96718L13.31 7.68508V14.7797Z" fill="#0E0E0E"/>
-            </svg>
-            <span class="page">
-                /   Home page
-            </span>
+<div ng-controller="HomeController" class="home-container"> 
+    <div class="card" ng-click="projectList()">
+        <i class="dds__icon dds__icon--clipboard-lines"></i>
+        <div class="card-body">
+          <h5 class="card-title">Project Listing</h5>
         </div>
-
-    </div>
-
-    <div class="container">
-        <button class="card">
-            <svg class="icon" width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.22008 7.43541H9.91529V8.49814H3.22008V7.43541ZM3.22008 9.86907H9.91529V11.0062H3.22008V9.86907ZM3.22008 12.3346H9.91529V13.4611H3.22008V12.3346ZM11.1056 2.00484V3.18448H12.0089V15.9373H1.1265V3.18448H2.02982V2.00484H0V17H13.1354V2.00484H11.1056ZM10.0322 1.36721H8.41684C8.16657 0.569093 7.43328 0 6.56769 0C5.70209 0 4.96881 0.569093 4.72225 1.35339L4.71853 1.36721H3.10318V4.87422H10.0322V1.36721ZM8.89507 3.7371H4.2403V2.50433H5.76001V1.93045C5.76001 1.48464 6.12187 1.12278 6.56769 1.12278C7.0135 1.12278 7.37536 1.48464 7.37536 1.93045V2.50433H8.89507V3.7371Z" fill="#6E6E6E"/>
-            </svg>
-
-            <span class="project-listing">
-                Project Listing
-            </span>
-    </button>
-    </div>
+    </div>    
 </div>

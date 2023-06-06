@@ -1,3 +1,5 @@
-app.controller('HomeController', function ($scope) { 
-    $scope.title = 'HELLO WORLD!!'
-});
+app.controller('HomeController', ['$scope', '$location', function ($scope, $location) { 
+    $scope.projectList = function () {
+        $location.path('/register');
+    };
+}]);

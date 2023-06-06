@@ -1,18 +1,17 @@
 <link rel="stylesheet" href="./app/features/header/header.css">
 
-<div ng-controller="HeaderController" class="header">
+<div class="header-container">
     <div class="logo"> 
-        <img class="logo-dellname" src="./app/assets/images/dellvector.png" />
+        <img src="./app/assets/images/dellvector.png" />
     </div>
 
     <div class="search-container">
-        <input class="search" placeholder="Search Domain">
-        <button class="icon-search" ng-click="search()">
-            <img src="./app/assets/images/search.png" />
-        </button>
+        <input class="search" ng-model="search">
     </div>
 
     <div class="icon-user">
         <i class="dds__icon dds__icon--user"></i>
+        <span>{{userName}}</span>
+        <i class="dds__icon dds__icon--chevron-down"></i>
     </div>
 </div>
