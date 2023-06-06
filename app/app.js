@@ -14,6 +14,10 @@ app.config(function($routeProvider) {
         templateUrl: './app/features/register/register.html',
         controller: 'RadioController',
       })
+      .when('/projects', {
+        templateUrl: './app/features/projectList/projectList.html',
+        controller: 'ProjectListController',
+      })
       .otherwise({
         redirectTo: '/',
       });
@@ -23,7 +27,7 @@ app.controller('MainController', function($scope, $location) {
   $scope.shouldShowHeader = function() {
     var currentPath = $location.path();
 
-    var allowedRoutes = ['/home'];
+    var allowedRoutes = ['/home', '/projects'];
 
     return allowedRoutes.includes(currentPath);
   };
