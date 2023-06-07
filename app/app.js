@@ -24,11 +24,17 @@ app.config(function($routeProvider) {
 })
 
 app.controller('MainController', function($scope, $location) {
-  $scope.shouldShowHeader = function() {
+
+  $scope.shouldShow = function() {
     var currentPath = $location.path();
-
     var allowedRoutes = ['/home', '/projects'];
-
     return allowedRoutes.includes(currentPath);
   };
+
+  $scope.isGridRequired = function() {
+    var currentPath = $location.path();
+    var allowedRoutes = ['/home', '/projects'];
+    return allowedRoutes.includes(currentPath);
+  };
+
 });

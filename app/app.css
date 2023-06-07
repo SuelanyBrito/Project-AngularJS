@@ -1,0 +1,37 @@
+.main {
+    margin: 0px;
+  }
+
+.grid-true {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40px;
+    grid-template-rows: 60px calc(100vh - 60px);
+    grid-template-areas:
+    "header  header"
+    "sidebar content";    
+}
+
+.grid-true .pages{
+    background: #e1e1e1;
+    overflow: hidden;
+    padding: 40px 20px;
+}
+
+.grid-false {
+   grid-template-areas: "content";
+ }
+
+  header-page {
+    grid-area: header;
+  }
+  
+  sidenav-page {
+    grid-area: sidebar;
+  }
+  
+  .pages {
+    display: block;
+    grid-area: content;
+  }

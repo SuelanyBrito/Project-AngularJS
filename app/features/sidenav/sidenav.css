@@ -1,0 +1,22 @@
+.sidenav-main-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sidenav-container {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .sidenav-card {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .sidenav-select {
+    background: #e1e1e1;
+  }
