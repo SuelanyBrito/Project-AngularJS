@@ -1,5 +1,15 @@
 .home-container{
     display: flex;
+    background: #FFFFFF;
+}
+
+.breadcrumb {
+    background: #e1e1e1;
+    padding-left: 2px;
+}
+
+a {
+    font-size: 1.5rem;
 }
 
 .card {
@@ -12,4 +22,13 @@
     cursor: pointer;
     height: 30vh;
     width: 50vh;
+}
+
+i{
+    font-size: 5rem;
+    color: #686868;
+}
+
+.dds__icon {
+    font-size: 1.5rem;
 }

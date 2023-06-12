@@ -20,3 +20,11 @@
   .sidenav-select {
     background: #e1e1e1;
   }
+
+  .dds__icon--home::before {
+    font-size: 1.5rem;
+}
+
+.dds__icon {
+  font-size: 1.5rem;
+}
