@@ -15,8 +15,12 @@ app.config(function($routeProvider) {
         controller: 'RadioController',
       })
       .when('/projects', {
-        templateUrl: './app/features/projectList/projectList.html',
+        templateUrl: './app/features/project/projectList/projectList.html',
         controller: 'ProjectListController',
+      })
+      .when('/projects-registration', {
+        templateUrl: './app/features/project/projectRegistration/projectRegistration.html',
+        controller: 'ProjectRegistrationController',
       })
       .otherwise({
         redirectTo: '/',

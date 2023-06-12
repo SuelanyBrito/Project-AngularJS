@@ -1,0 +1,55 @@
+<div ng-controller="ProjectRegistrationController" class="container">
+  <div class="title">
+    <h3>New Project</h3>
+  </div>
+
+  <div class="documents">
+    <h3>Documents</h3>
+    <button class="dds__button dds__button--secondary dds__button--md dds__file-input__button" ng-click="click()">
+      <input
+        hidden
+        id="file-input-document"
+        type="file"
+        onchange="angular.element(this).scope().inputFileChange(this)"
+      />
+      <i class="dds__icon dds__icon--upload"></i>
+      Browse Files
+    </button>
+  </div>
+
+  <div class="metadata">
+    <h3>Metadata</h3>
+    <form class="form">
+      <div class="name">
+        <label>Name of Project</label>
+        <input type="text" ng-model="project.name" required />
+      </div>
+
+      <div class="coordinator">
+        <label>Coordinator</label>
+        <input type="text" ng-model="project.coordinator" required />
+      </div>
+
+      <div class="students">
+        <label>Students</label>
+        <select
+          ng-model="project.student"
+          ng-options="student.name for student in students"
+        ></select>
+      </div>
+
+      <div class="description">
+        <label>Description</label>
+        <input type="text" ng-model="project.description" />
+      </div>
+    </form>
+    <div style="text-align: end">
+      <button class="bnt-secondary" type="button" ng-click="cancel()">
+        Cancel
+      </button>
+      <button class="bnt-primary" type="button" ng-click="upload()">
+        Upload
+      </button>
+    </div>
+  </div>
+</div>
