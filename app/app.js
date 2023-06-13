@@ -31,13 +31,13 @@ app.controller('MainController', function($scope, $location) {
 
   $scope.shouldShow = function() {
     var currentPath = $location.path();
-    var allowedRoutes = ['/home', '/projects'];
+    var allowedRoutes = ['/home', '/projects', '/projects-registration'];
     return allowedRoutes.includes(currentPath);
   };
 
   $scope.isGridRequired = function() {
     var currentPath = $location.path();
-    var allowedRoutes = ['/home', '/projects'];
+    var allowedRoutes = ['/home', '/projects', '/projects-registration'];
     return allowedRoutes.includes(currentPath);
   };
 
