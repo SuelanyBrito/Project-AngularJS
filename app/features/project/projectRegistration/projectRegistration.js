@@ -1,4 +1,4 @@
-angular.module('myApp').controller("ProjectRegistrationController", function ($scope, $rootScope) {
+app.controller("ProjectRegistrationController", function ($scope, $rootScope, $location) {
     $scope.project = {
       name: "",
       coordinator: "",
@@ -28,6 +28,7 @@ angular.module('myApp').controller("ProjectRegistrationController", function ($s
         description: "",
         document: "",
       };
+      $location.path('/home');
     };
 
     $scope.upload = function () {
