@@ -33,6 +33,7 @@ app.controller("ProjectRegistrationController", function ($scope, $rootScope, $l
 
     $scope.upload = function () {
       $rootScope.$emit("newProject", $scope.project);
+      $location.path('/projects');
     };
 
     $scope.click = function () {
