@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="../../../../app/features/project/projectRegistration/projectRegistration.css">
+
 <div ng-controller="ProjectRegistrationController" class="container">
   <div class="title">
     <h3>New Project</h3>
+    <p>Upload new documents referring to the projects and fill in the detail fields.</p>
   </div>
 
   <div class="documents">
@@ -22,17 +25,18 @@
     <form class="form">
       <div class="name">
         <label>Name of Project</label>
-        <input type="text" ng-model="project.name" required />
+        <input type="text" class="custom" ng-model="project.name" required/>
       </div>
 
       <div class="coordinator">
         <label>Coordinator</label>
-        <input type="text" ng-model="project.coordinator" required />
+        <input type="text" class="custom" ng-model="project.coordinator" required />
       </div>
 
       <div class="students">
         <label>Students</label>
         <select
+          class="custom"
           ng-model="project.student"
           ng-options="student.name for student in students"
         ></select>
@@ -40,14 +44,14 @@
 
       <div class="description">
         <label>Description</label>
-        <input type="text" ng-model="project.description" />
+        <input type="text" class="custom" ng-model="project.description" />
       </div>
     </form>
     <div style="text-align: end">
-      <button class="bnt-secondary" type="button" ng-click="cancel()">
+      <button class="btn btn-secondary" type="button" ng-click="cancel()">
         Cancel
       </button>
-      <button class="bnt-primary" type="button" ng-click="upload()">
+      <button class="btn btn-primary" type="button" ng-click="upload()">
         Upload
       </button>
     </div>
