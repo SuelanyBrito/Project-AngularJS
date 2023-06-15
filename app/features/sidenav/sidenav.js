@@ -6,17 +6,17 @@ app.directive('sidenavPage', function() {
     };
   })
   
-  app.controller("SidenavController", function ($scope) {
+  app.controller("SidenavController", function ($location, $scope, $route) {
     $scope.pages = [
       {
         icon: "home",
         select: true,
-        rediretUrl: "home",
+        rediretUrl: "/home",
       },
       {
         icon: "clipboard-lines",
         select: false,
-        rediretUrl: "projects",
+        rediretUrl: "/projects",
       },
     ];  
       
@@ -40,4 +40,13 @@ app.directive('sidenavPage', function() {
         $location.path(rediretPage);
       }
     };
+
+    $scope.$on("$routeChangeSuccess", function () {
+      var currentRoute = $route.current;
+      console.log(currentRoute);
+      $scope.pages.forEach(function (page) {
+        console.log(page);
+        page.select = page.rediretUrl === currentRoute.$$route.originalPath;
+      });
+    });
   });
