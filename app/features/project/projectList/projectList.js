@@ -1,22 +1,30 @@
 app.controller('ProjectListController', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) { 
-    $scope.inicial = "hello world";
+    var initialValue = "hello world"; 
+    
+    $scope.inicial = initialValue;
 
     $scope.newProject = function(){
         $location.path('/projects-registration');
     }
 
-    $scope.setValue = function(project){
-        console.log($scope.project);
-        $scope.$apply(function() {
-            $scope.inicial = project;
-        });
-    };
+    $scope.details = function(){
+        $location.path('/projects-details');
+    }
 
-    $scope.$on("newProject", function(event, newProject){
-        console.log(newProject);
-        $scope.project = newProject;
-        $scope.setValue(newProject);
-    });
+    $scope.setValue = function(project){
+        console.log(project);
+        $scope.inicial = project;
+        initialValue = project;
+    };
     
-    console.log($scope.inicial);
+    var projectListener = $rootScope.$on("newProject", function (event, project) {
+        console.log("Novo projeto recebido:", project);
+        $scope.setValue(project);
+    });
+
+    console.log( $scope.inicial);
+ 
+    $scope.$on("$destroy", function () {});
+
+    console.log( initialValue);
 }]);

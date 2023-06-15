@@ -43,9 +43,7 @@ app.directive('sidenavPage', function() {
 
     $scope.$on("$routeChangeSuccess", function () {
       var currentRoute = $route.current;
-      console.log(currentRoute);
       $scope.pages.forEach(function (page) {
-        console.log(page);
         page.select = page.rediretUrl === currentRoute.$$route.originalPath;
       });
     });
