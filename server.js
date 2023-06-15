@@ -16,6 +16,8 @@ const server = http.createServer((req, res) => {
     filePath = './app/features/project/projectList/projectList.html';
   }else if(filePath === './projects-registration') {
     filePath = './app/features/project/projectRegistration/projectRegistration.html';
+  }else if(filePath === './projects-details') {
+    filePath = './app/features/project/projectDetails/projectDetails.html';
   }
 
   const extname = path.extname(filePath);

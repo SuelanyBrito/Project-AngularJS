@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="../../../../app/features/project/projectDetails/projectDetails.css">
+
+<div ng-controller="ProjectDetailsController" class="container">
+    <div class="detailing-container">
+        <h3>{{nameProject}}</h3>
+        <p>Summary: {{description}}</p>
+    </div>
+    <div class="information">
+        <h3>{{nameProject}}</h3>
+
+        <h4>Coordinator: </h4> {{projectCoordinator}}
+
+        <h4>Students</h4> 
+        <div ng-repeat="student in students">
+            {{student.name}}
+        </div>
+
+        <h4>Upload: </h4> {{upload}}
+        <h4>Comments: </h4> {{comments}}
+        <h4>Type: </h4> {{typeDocument}}
+        <h4>Format: </h4> {{format}}
+        <h4>File Size: </h4> {{fileSize}}
+    </div>
+</div>
