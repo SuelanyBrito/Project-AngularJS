@@ -1,6 +1,9 @@
 app.controller('ProjectListController', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) { 
     $scope.inicial = "hello world";
 
+    $scope.newProject = function(){
+        $location.path('/projects-registration');
+    }
 
     $scope.setValue = function(project){
         console.log($scope.project);
