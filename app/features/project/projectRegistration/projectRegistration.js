@@ -1,4 +1,4 @@
-app.controller("ProjectRegistrationController", function ($scope, $rootScope, $location) {
+app.controller("ProjectRegistrationController", function ($scope, ProjectService, $location) {
     $scope.project = {
       name: "",
       coordinator: "",
@@ -32,7 +32,7 @@ app.controller("ProjectRegistrationController", function ($scope, $rootScope, $l
     };
 
     $scope.upload = function () {
-      $rootScope.$emit("newProject", $scope.project);
+      ProjectService.addData($scope.project);
       $location.path('/projects');
     };
 

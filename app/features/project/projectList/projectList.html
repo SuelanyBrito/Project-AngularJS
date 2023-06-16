@@ -3,7 +3,6 @@
         New
     </button>
     <div class="listing">
-        <a ng-click="details()">PROJETO 1</a> 
-        <a> {{ newProject.name }}</a>
+        <li ng-repeat="project in dataList">{{ project }}</li>
     </div>
 </div>
