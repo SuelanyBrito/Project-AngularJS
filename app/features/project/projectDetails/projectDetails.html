@@ -2,23 +2,27 @@
 
 <div ng-controller="ProjectDetailsController" class="container">
     <div class="detailing-container">
-        <h3>{{nameProject}}</h3>
-        <p>Summary: {{description}}</p>
+        <div class="title">
+            <h3>{{project.name}}</h3>
+            <p>Summary: {{project.description}}</p>
+        </div>     
+
+        <img class="img-responsive" src="../../../../app/assets/images/doc.png" />
     </div>
     <div class="information">
-        <h3>{{nameProject}}</h3>
+        <h4>{{project.name}}</h4>
 
-        <h4>Coordinator: </h4> {{projectCoordinator}}
+        <p><span>Coordinator: </span>{{project.coordinator}} </p>
 
-        <h4>Students</h4> 
-        <div ng-repeat="student in students">
-            {{student.name}}
-        </div>
-
-        <h4>Upload: </h4> {{upload}}
-        <h4>Comments: </h4> {{comments}}
-        <h4>Type: </h4> {{typeDocument}}
-        <h4>Format: </h4> {{format}}
-        <h4>File Size: </h4> {{fileSize}}
+        <p><span>Students </span>
+            <div ng-repeat="student in project.students">
+                {{student.name}}
+            </div>
+        </p>
+        <p><span>Upload:</span> {{project.date}} </p>
+        <p><span>Comments:</span>  {{comments}}</p>
+        <p><span>Type:</span>  {{typeDocument}}</p>
+        <p><span>Format: </span> {{format}} </p>
+        <p><span>File Size:</span> {{fileSize}}</p>
     </div>
 </div>

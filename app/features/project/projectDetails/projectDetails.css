@@ -1,14 +1,27 @@
 .container{
     display: flex;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    padding-right: 0px !important;
-    flex-direction: column;
+    height: calc(100% - 50px);
     background: #FFFFFF;
+    padding: 0%;
 }
 
-h3 {
+.detailing-container{
+    width: 58%;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.title{
+    max-height: 20%;
+}
+
+.information {
+    width: 39%;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+span {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
