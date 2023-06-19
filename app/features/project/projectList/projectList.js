@@ -6,7 +6,8 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
         $location.path('/projects-registration');
     }
 
-    $scope.details = function(){
+    $scope.details = function(project){
+        ProjectService.setProjectSelect(project);
         $location.path('/projects-details');
     }
     
