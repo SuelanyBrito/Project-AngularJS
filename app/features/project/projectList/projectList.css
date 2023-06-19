@@ -1,0 +1,25 @@
+
+.listing-container {
+    display: flex;
+    background: #FFFFFF;
+    height: 500px;
+
+}
+
+.breadcrumb {
+    background: #E1E1E1;
+    padding-left: 2px;
+}
+
+.dds__icon {
+    font-size: 1.5rem;
+}
+
+
+.search-listing-container {
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+

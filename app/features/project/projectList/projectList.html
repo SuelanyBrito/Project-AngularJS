@@ -1,8 +1,52 @@
-<div>
-    <button class="btn btn-primary" type="button" ng-click="newProject()">
-        New
-    </button>
-    <div class="listing">
-        <li ng-repeat="project in dataList">{{ project }}</li>
-    </div>
+<link rel="stylesheet" href="./app/features/project/projectList/projectList.css">
+
+<div class="breadcrumb">
+    <i class="dds__icon dds__icon--home">
+         <a>/Project Listing</a>
+    </i> 
 </div>
+
+<div>
+    <button class="btn btn-light" type="button" ng-click="newProject()">
+        + Add Project
+    </button>
+</div>
+
+<div class="search-listing-container">
+    <input class="search" ng-model="search">
+    <button class="btn btn-outline-primary" type="button" ng-click="newProject()">
+        Clear
+    </button>
+    <button class="btn btn-primary" type="button" ng-click="newProject()">
+        Search
+    </button>
+</div>
+
+<div class="listing-container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name of Project</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+            <th scope="col">Coordinator</th>
+            <th scope="col">Students</th>
+          </tr>
+        </thead>
+        <tbody>
+          <div>
+            <tr ng-repeat="project in dataList">
+              <th scope="row">
+                  <a ng-click="details()">
+                    {{ project.name }}
+                  </a>
+              </th>
+              <td>{{project.description}}</td>
+              <td>{{project.date}}</td></td>
+              <td>{{ project.coordinator }}</td>
+              <td>{{ project.students }}</td>
+            </tr>
+          </div>
+        </tbody>
+</div>
+ 
