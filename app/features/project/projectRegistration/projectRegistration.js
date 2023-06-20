@@ -4,7 +4,7 @@ app.controller("ProjectRegistrationController", function ($scope, ProjectService
       coordinator: "",
       students: "",
       description: "",
-      document: "",
+      document: {},
     };
 
     $scope.students = [
@@ -18,21 +18,20 @@ app.controller("ProjectRegistrationController", function ($scope, ProjectService
       }
     ];
 
-    $scope.documents = [];
-
     $scope.cancel = function () {
       $scope.project = {
         name: "",
         coordinator: "",
         students: "",
         description: "",
-        document: "",
+        document: {},
       };
       $location.path('/home');
     };
 
     $scope.upload = function () {
       ProjectService.addData($scope.project);
+      console.log($scope.project);
       $location.path('/projects');
     };
 
@@ -41,9 +40,8 @@ app.controller("ProjectRegistrationController", function ($scope, ProjectService
     };
 
     $scope.inputFileChange = function (element) {
-      const file = element.files[0];
-      console.log(file);
-      $scope.documents = element.files;
-      $scope.project.document = file;
+      $scope.project.document = element.files[0];
     };
+
+    
   });
