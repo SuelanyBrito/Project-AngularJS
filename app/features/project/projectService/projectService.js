@@ -9,7 +9,8 @@ app.service('ProjectService', function() {
         description: project.description,
         date: new Date(2023, 6, 19),
         coordinator: project.coordinator,
-        students: project.students,
+        students: project.student,
+        document: project.document
       });
     };
   

@@ -14,7 +14,7 @@
 
         <p><span>Coordinator: </span>{{project.coordinator}} </p>
 
-        <p><span>Students </span>
+        <p><span>Students: </span>
             <div ng-repeat="student in project.students">
                 {{student.name}}
             </div>
@@ -22,7 +22,7 @@
         <p><span>Upload:</span> {{project.date}} </p>
         <p><span>Comments:</span>  {{comments}}</p>
         <p><span>Type:</span>  {{typeDocument}}</p>
-        <p><span>Format: </span> {{format}} </p>
-        <p><span>File Size:</span> {{fileSize}}</p>
+        <p><span>Format: </span> {{project.document.type}} </p>
+        <p><span>File Size:</span> {{project.document.size}}</p>
     </div>
 </div>

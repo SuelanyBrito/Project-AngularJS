@@ -8,14 +8,9 @@
 
   <div class="documents">
     <h3>Documents</h3>
-    <button class="dds__button dds__button--secondary dds__button--md dds__file-input__button" ng-click="click()">
-      <input
-        hidden
-        id="file-input-document"
-        type="file"
-        onchange="angular.element(this).scope().inputFileChange(this)"
-      />
-      <i class="dds__icon dds__icon--upload"></i>
+    <button class="btn btn-secondary btn-md" ng-click="click()">
+      <input hidden id="file-input-document" type="file" onchange="angular.element(this).scope().inputFileChange(this)" />
+      <i class="fas fa-upload"></i>
       Browse Files
     </button>
   </div>
@@ -23,17 +18,17 @@
   <div class="metadata">
     <h3>Metadata</h3>
     <form class="form">
-      <div class="name">
+      <div class="element name">
         <label>Name of Project</label>
         <input type="text" class="custom" ng-model="project.name" required/>
       </div>
 
-      <div class="coordinator">
+      <div class="element coordinator">
         <label>Coordinator</label>
         <input type="text" class="custom" ng-model="project.coordinator" required />
       </div>
 
-      <div class="students">
+      <div class="element students">
         <label>Students</label>
         <select
           class="custom"
@@ -42,7 +37,7 @@
         ></select>
       </div>
 
-      <div class="description">
+      <div class="element description">
         <label>Description</label>
         <input type="text" class="custom" ng-model="project.description" />
       </div>
