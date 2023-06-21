@@ -35,8 +35,8 @@
   
 img {
     object-fit: contain;
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
 }
 
 .information {
@@ -54,4 +54,23 @@ span {
     line-height: 20px;
     letter-spacing: 0.005em;
     color: #000000;
+}
+
+#nav-bnt {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: blue;
+}
+  
+#nav-bnt i {
+    font-size: 1.2rem;
+}
+
+.back{
+    padding-top: 20px;
+    height: 40px;
 }

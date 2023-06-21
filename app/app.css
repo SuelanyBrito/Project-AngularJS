@@ -15,7 +15,7 @@
 
 .grid-true .pages{
     background: #e1e1e1;
-    overflow: hidden;
+    overflow: auto;
     padding: 40px 20px;
 }
 
