@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="../../../../app/features/project/project.css">
+
+<div ng-controller="ProjectController" class="main-container general">
+  <ul class="tabs">
+    <div class="tab" ng-class="{active: tab === 'content'}">
+      <a ng-click="setTab('content')">Listing</a>
+    </div>
+    <div class="tab" ng-class="{active: tab === 'new'}">
+      <a ng-click="setTab('new')">
+        <i class="dds__icon dds__icon--plus-add"></i> Add Project
+      </a>
+    </div>
+  </ul>
+
+  <div class="tab-content general">
+    <div ng-switch="tab" class="general-content">
+      <div ng-switch-when="content" class="general-content">
+        <div
+          ng-include="'../app/features/project/projectList/projectList.html'"
+          class="general-content"
+        ></div>
+      </div>
+      <div ng-switch-when="new">
+        <div
+          ng-include="'../app/features/project/projectRegistration/projectRegistration.html'"
+          class="general-content"
+        ></div>
+      </div>
+      <div ng-switch-when="details" class="details">
+        <div
+          ng-include="'../app/features/project/projectDetailing/projectDetailing.html'"
+          class="general-content"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

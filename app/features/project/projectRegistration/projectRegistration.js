@@ -31,8 +31,7 @@ app.controller("ProjectRegistrationController", function ($scope, ProjectService
 
     $scope.upload = function () {
       ProjectService.addData($scope.project);
-      console.log($scope.project);
-      $location.path('/projects');
+      $scope.$emit("Listing");
     };
 
     $scope.click = function () {
