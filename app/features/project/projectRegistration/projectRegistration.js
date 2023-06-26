@@ -41,6 +41,5 @@ app.controller("ProjectRegistrationController", function ($scope, ProjectService
     $scope.inputFileChange = function (element) {
       $scope.project.document = element.files[0];
     };
-
     
   });

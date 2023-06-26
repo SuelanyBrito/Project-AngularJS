@@ -26,5 +26,9 @@ app.service('ProjectService', function() {
       return projectselect;
     };
 
+    this.size = function(){
+      return dataList.length;
+    }
+
 });
   

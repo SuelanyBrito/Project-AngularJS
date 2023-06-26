@@ -10,5 +10,7 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
         ProjectService.setProjectSelect(project);
         $scope.$emit("Details");
     }
+
+    $scope.sizeList = ProjectService.size();
     
 });

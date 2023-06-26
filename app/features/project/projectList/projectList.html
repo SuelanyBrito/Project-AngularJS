@@ -1,47 +1,61 @@
 <link rel="stylesheet" href="./app/features/project/projectList/projectList.css">
 
 <div ng-controller="ProjectListController" class="container">
-<div>
-    <button class="btn btn-light" type="button" ng-click="newProject()">
-        + Add Project
-    </button>
-</div>
+  <div class="search-listing-container">
+      <input class="search" ng-model="search">
+      <button class="btn btn-outline-primary" type="button" ng-click="newProject()">
+          Clear
+      </button>
+      <button class="btn btn-primary" type="button" ng-click="newProject()">
+          Search
+      </button>
+  </div>
 
-<div class="search-listing-container">
-    <input class="search" ng-model="search">
-    <button class="btn btn-outline-primary" type="button" ng-click="newProject()">
-        Clear
-    </button>
-    <button class="btn btn-primary" type="button" ng-click="newProject()">
-        Search
-    </button>
-</div>
-
-<div class="listing-container">
-    <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Name of Project</th>
-            <th scope="col">Description</th>
-            <th scope="col">Date</th>
-            <th scope="col">Coordinator</th>
-            <th scope="col">Students</th>
-          </tr>
-        </thead>
-        <tbody>
-          <div>
-            <tr ng-repeat="project in dataList">
-              <th scope="row">
-                  <a ng-click="details(project)">
-                    {{ project.name }}
-                  </a>
-              </th>
-              <td>{{project.description}}</td>
-              <td>{{project.date}}</td></td>
-              <td>{{ project.coordinator }}</td>
-              <td>{{ project.students }}</td>
+  <div class="listing-container">
+    <span>Projects (0{{ sizeList }}):</span>
+    <i class="dds__icon dds__icon--compare"></i>
+    <i class="dds__icon dds__icon--trash"></i>
+    <i class="dds__icon dds__icon--download"></i>
+      <table class="listing-container table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name of Project</th>
+              <th scope="col">Description</th>
+              <th scope="col">Date</th>
+              <th scope="col">Coordinator</th>
+              <th scope="col">Students</th>
             </tr>
-          </div>
-        </tbody>
+          </thead>
+          <tbody>
+            <div>
+              <tr ng-repeat="project in dataList | limitTo: 5">
+                <th scope="row">
+                    <a ng-click="details(project)">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" style="padding: 10px" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                          {{ project.name }}
+                        </label>
+                      </div>
+                    </a>
+                </th>
+                <td>{{ project.description }}</td>
+                <td>{{ project.date }}</td></td>
+                <td>{{ project.coordinator }}</td>
+                <td>{{ project.students.name }}</td>
+              </tr>
+            </div>
+          </tbody>
+        </table>
+        <div class="page">
+          <select>
+            <option value="page1">5</option>
+            <option value="page2">10</option>
+            <option value="page3">15</option>
+            <option value="page4">20</option>
+            <option value="page5">25</option>
+          </select>
+          1-1 of 06 items
+        </div>
+  </div>
 </div>
- </div>
