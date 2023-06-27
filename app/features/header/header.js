@@ -7,5 +7,6 @@ app.directive('headerPage', function() {
 })
 
 app.controller("HeaderController", function ($scope) {
-  $scope.userName = "Suelany";
+    $scope.userName = localStorage.getItem('username');
+ 
 });
