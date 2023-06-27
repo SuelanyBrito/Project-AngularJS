@@ -28,7 +28,7 @@
           </thead>
           <tbody>
             <div>
-              <tr ng-repeat="project in dataList | limitTo: 5">
+              <tr ng-repeat="project in dataList | limitTo: selectedPage">
                 <th scope="row">
                     <a ng-click="details(project)">
                       <div class="form-check">
@@ -48,14 +48,8 @@
           </tbody>
         </table>
         <div class="page">
-          <select>
-            <option value="page1">5</option>
-            <option value="page2">10</option>
-            <option value="page3">15</option>
-            <option value="page4">20</option>
-            <option value="page5">25</option>
-          </select>
-          1-1 of 06 items
+          <select ng-model="selectedPage" ng-options="page as page for page in pages"></select>
+          <span style="color: #9e9d9d">-{{numberOfPages()}} of 0{{ sizeList }} items</span>
         </div>
   </div>
 </div>

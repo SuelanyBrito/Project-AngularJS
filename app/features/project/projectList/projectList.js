@@ -1,4 +1,5 @@
 app.controller('ProjectListController', function (ProjectService, $scope, $location) { 
+    $scope.pages = [5, 10, 15, 20, 25];
       
     $scope.dataList = ProjectService.getDataList();
 
@@ -12,5 +13,10 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
     }
 
     $scope.sizeList = ProjectService.size();
-    
+
+    $scope.selectedPage = "5";  
+
+    $scope.numberOfPages = function(){
+        return Math.ceil($scope.sizeList/$scope.selectedPage);
+    }
 });

@@ -23,6 +23,12 @@
     transform: translateY(-50%);
 }
 
+.page select{
+    height: 30px;
+    width: 45px;
+    border-color:#9e9d9d;
+}
+
 .search-listing-container {
     display: flex;
     width: 100%;
