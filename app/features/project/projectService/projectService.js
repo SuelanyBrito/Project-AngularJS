@@ -30,5 +30,22 @@ app.service('ProjectService', function() {
       return dataList.length;
     }
 
+    this.updateProject = function(project) {
+      var index = dataList.findIndex(function(item) {
+        return item.name === projectselect.name;
+      });
+  
+      if (index !== -1) {
+        dataList[index] = {
+          name: project.name,
+          description: project.description,
+          date: project.date,
+          coordinator: project.coordinator,
+          students: project.students,
+          document: project.document
+        };
+      }
+    }
+
 });
   

@@ -1,4 +1,4 @@
-app.controller('LoginController', ['$scope', '$location', function ($scope, $location, $timeout) { 
+app.controller('LoginController', function ($scope, $location, $timeout) { 
     $scope.title = 'Login'
     $scope.userData = {};
 
@@ -19,4 +19,4 @@ app.controller('LoginController', ['$scope', '$location', function ($scope, $loc
         $location.path('/register');
     };
 
-}]);
+});

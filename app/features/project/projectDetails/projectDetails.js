@@ -1,4 +1,4 @@
-app.controller('ProjectDetailsController', function ($scope, ProjectService) { 
+app.controller('ProjectDetailsController', function ($scope, ProjectService, $location) { 
     $scope.project = ProjectService.getProjectSelect();
 
     $scope.comments = ""
@@ -7,4 +7,8 @@ app.controller('ProjectDetailsController', function ($scope, ProjectService) {
     $scope.back = function(){
         $scope.$emit("Listing");
     }
+
+    $scope.edit = function () {
+        $location.path('/projects/edit');
+    };
 });

@@ -18,6 +18,10 @@ app.config(function($routeProvider) {
         templateUrl: './app/features/project/project.html',
         controller: 'ProjectController',
       })
+      .when('/projects/edit', {
+        templateUrl: './app/features/project/projectEdit/projectEdit.html',
+        controller: 'ProjectEditController',
+      })
       .otherwise({
         redirectTo: '/',
       });
@@ -27,13 +31,13 @@ app.controller('MainController', function($scope, $location) {
 
   $scope.shouldShow = function() {
     var currentPath = $location.path();
-    var allowedRoutes = ['/home', '/projects', '/projects-registration', '/projects-details'];
+    var allowedRoutes = ['/home', '/projects', '/projects/edit'];
     return allowedRoutes.includes(currentPath);
   };
 
   $scope.isGridRequired = function() {
     var currentPath = $location.path();
-    var allowedRoutes = ['/home', '/projects', '/projects-registration','/projects-details'];
+    var allowedRoutes = ['/home', '/projects', '/projects/edit'];
     return allowedRoutes.includes(currentPath);
   };
 

@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    flex-direction: column;
+}
+
+.documents {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px #e1e1e1;
+    padding: 10px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+}
+
+.custom {
+    margin-top: 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #7E7E7E;
+    border-radius: 2px;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}

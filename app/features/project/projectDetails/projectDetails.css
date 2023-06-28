@@ -74,3 +74,21 @@ span {
     padding-top: 20px;
     height: 40px;
 }
+
+.edit {
+    text-align: right;
+  }
+  
+.button-edit {
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-back{
+    margin-right: auto
+}
