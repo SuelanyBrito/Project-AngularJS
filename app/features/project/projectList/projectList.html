@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="./app/features/project/projectList/projectList.css">
 
 <div ng-controller="ProjectListController" class="container">
-  <div class="search-listing-container">
+  <div class="listing-container">
+    <div class="search-listing-container">
       <input class="search" placeholder="Search for Project" ng-model="search">
       <button class="btn btn-outline-primary button-clear" type="button" ng-click="newProject()">
           Clear
@@ -9,16 +10,25 @@
       <button class="btn btn-primary button-search" type="button" ng-click="newProject()">
           Search
       </button>
-  </div>
+    </div>
+    
+    <hr style="border-bottom: 3.5px solid #E1E1E1;">
 
-  <hr style="border-bottom: 3.5px solid #E1E1E1;">
+    <div class="projects">
+      <div class="header">
+        <div>
+          <span>Projects ({{ numCustomProjects() }}):
+          </span>
+        </div>
+        <div>
+          <i class="dds__icon dds__icon--compare"></i>
+          <i class="dds__icon dds__icon--trash"></i>
+          <i class="dds__icon dds__icon--download"></i>
+        </div>
+      </div>
 
-  <div class="listing-container">
-    <span>Projects ({{ numCustomProjects() }}):</span>
-    <i class="dds__icon dds__icon--compare"></i>
-    <i class="dds__icon dds__icon--trash"></i>
-    <i class="dds__icon dds__icon--download"></i>
-      <table class="listing-container table table-striped">
+      <div class="table">
+        <table class="listing-container table table-striped">
           <thead>
             <tr>
               <th scope="col">Name of Project</th>
@@ -30,10 +40,11 @@
           </thead>
           <tbody>
             <div>
-              <tr ng-repeat="project in dataList | limitTo: selectedPage">
+              <tr ng-repeat="project in paginete">
                 <th scope="row">
                     <a ng-click="details(project)">
                       <div class="form-check">
+                        {{project.name}}
                         <input class="form-check-input" type="checkbox" style="padding: 10px" value="" id="defaultCheck1">
                         <label class="form-check-label" for="defaultCheck1">
                           {{ project.name }}
@@ -49,9 +60,25 @@
             </div>
           </tbody>
         </table>
-        <div class="page">
-          <select ng-model="selectedPage" ng-options="page as page for page in pages"></select>
-          <span style="color: #9e9d9d">-{{numberOfPages()}} of 0{{ sizeList }} items</span>
-        </div>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="page-1">
+        <select ng-model="selectedPage" ng-options="page as page for page in pages" ng-change="updatePages()"></select>
+        <span style="color: #9e9d9d">-{{numberOfPages()}} of {{ numCustomProjects() }} items</span>
+      </div>
+  
+      <div class="page-2">
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">2</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
   </div>
 </div>
