@@ -46,6 +46,5 @@ app.service('ProjectService', function() {
         };
       }
     }
-
 });
   

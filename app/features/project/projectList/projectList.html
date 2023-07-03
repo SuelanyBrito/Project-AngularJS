@@ -3,12 +3,12 @@
 <div ng-controller="ProjectListController" class="container">
   <div class="listing-container">
     <div class="search-listing-container">
-      <input class="search" placeholder="Search for Project" ng-model="search">
+      <input class="search" placeholder="Search for Project" ng-model="searchText">
       <button class="btn btn-outline-primary button-clear" type="button" ng-click="newProject()">
-          Clear
+        Clear
       </button>
-      <button class="btn btn-primary button-search" type="button" ng-click="newProject()">
-          Search
+      <button class="btn btn-primary button-search" type="button" ng-click="search()">
+        Search
       </button>
     </div>
     
@@ -40,7 +40,7 @@
           </thead>
           <tbody>
             <div>
-              <tr ng-repeat="project in paginete">
+              <tr ng-repeat="project in paginate">
                 <th scope="row">
                     <a ng-click="details(project)">
                       <div class="form-check">

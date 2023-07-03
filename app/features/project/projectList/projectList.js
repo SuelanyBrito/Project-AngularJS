@@ -12,6 +12,27 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
         $scope.$emit("Details");
     }
 
+    $scope.searchText = '';
+    $scope.listProject = [];
+
+    $scope.search = function() {
+        if($scope.searchText !== '' && $scope.listProject !== []) {
+            for (let index = 0; index < $scope.dataList.length; index++) {
+                if($scope.searchText.toLowerCase().includes($scope.dataList[index].name.toLowerCase())){
+                    $scope.listProject.push($scope.dataList[index]);
+                } 
+            }
+        }
+
+        if ($scope.listProject !== [])      {
+            $scope.paginate = $scope.calculateView($scope.listProject);
+        }
+        else {
+            $scope.paginate = $scope.calculateView($scope.dataList);
+        }
+    }
+
+
     $scope.sizeList = ProjectService.size();
 
     $scope.numCustomProjects = function () {
@@ -20,14 +41,19 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
 
     $scope.selectedPage = $scope.pages[0];  
 
-    // $scope.paginate = $scope.calculateView;
-    // $scope.currentPage = 1; // a definir
+    $scope.paginate = [];
+    $scope.currentPage = 1; // a definir
 
-    // $scope.calculateView = function () {
-    //   var startIndex = ($scope.currentPage - 1) * $scope.selectedPage;
-    //   var endIndex = startIndex + $scope.selectedPage;
-    //   return $scope.dataList.slice(startIndex, endIndex);
-    // };
+    $scope.calculateView = function (element) {
+      var startIndex = ($scope.currentPage - 1) * $scope.selectedPage;
+      var endIndex = startIndex + $scope.selectedPage;
+      if (element === $scope.dataList){
+        return $scope.dataList.slice(startIndex, endIndex);
+      }
+      else {
+        return $scope.listProject.slice(startIndex, endIndex);
+      }
+    };
 
     $scope.numberOfPages = function(){
         return Math.ceil($scope.sizeList/$scope.selectedPage);
