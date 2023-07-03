@@ -14,7 +14,11 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
 
     $scope.sizeList = ProjectService.size();
 
-    $scope.selectedPage = "5";  
+    $scope.numCustomProjects = function () {
+        return $scope.sizeList < '10' ? '0' + $scope.sizeList : $scope.sizeList;
+    }
+
+    $scope.selectedPage = $scope.pages[0];  
 
     $scope.numberOfPages = function(){
         return Math.ceil($scope.sizeList/$scope.selectedPage);
