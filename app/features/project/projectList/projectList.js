@@ -16,13 +16,19 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
     $scope.listProject = [];
 
     $scope.search = function() {
-        if($scope.searchText !== '' && $scope.listProject !== []) {
+        $scope.listProject = [];
+        if($scope.searchText !== '') {
             for (let index = 0; index < $scope.dataList.length; index++) {
                 if($scope.searchText.toLowerCase().includes($scope.dataList[index].name.toLowerCase())){
                     $scope.listProject.push($scope.dataList[index]);
                 } 
             }
         }
+    }
+
+    $scope.clear = function() {
+        document.getElementById('searchId').value = '';
+        $scope.listProject = [];
     }
 
 
