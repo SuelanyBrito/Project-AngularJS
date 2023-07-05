@@ -19,11 +19,17 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
         $scope.listProject = [];
         if($scope.searchText !== '') {
             for (let index = 0; index < $scope.dataList.length; index++) {
-                if($scope.searchText.toLowerCase().includes($scope.dataList[index].name.toLowerCase())){
+                const itemName = $scope.dataList[index].name.toLowerCase();
+                const searchText = $scope.searchText.toLowerCase();
+                
+                const regex = new RegExp("\\b" + searchText + "\\b");
+                
+                if(regex.test(itemName)){
                     $scope.listProject.push($scope.dataList[index]);
                 } 
             }
         }
+        console.log()
     }
 
     $scope.clear = function() {
