@@ -23,13 +23,6 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
                 } 
             }
         }
-
-        if ($scope.listProject !== [])      {
-            $scope.paginate = $scope.calculateView($scope.listProject);
-        }
-        else {
-            $scope.paginate = $scope.calculateView($scope.dataList);
-        }
     }
 
 
@@ -47,11 +40,11 @@ app.controller('ProjectListController', function (ProjectService, $scope, $locat
     $scope.calculateView = function (element) {
       var startIndex = ($scope.currentPage - 1) * $scope.selectedPage;
       var endIndex = startIndex + $scope.selectedPage;
-      if (element === $scope.dataList){
-        return $scope.dataList.slice(startIndex, endIndex);
+      if ($scope.listProject.length !== 0){
+        return $scope.listProject.slice(startIndex, endIndex);
       }
       else {
-        return $scope.listProject.slice(startIndex, endIndex);
+        return $scope.dataList.slice(startIndex, endIndex);
       }
     };
 

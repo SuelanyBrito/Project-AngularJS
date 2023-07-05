@@ -40,11 +40,10 @@
           </thead>
           <tbody>
             <div>
-              <tr ng-repeat="project in paginate">
+              <tr ng-repeat="project in calculateView()">
                 <th scope="row">
                     <a ng-click="details(project)">
                       <div class="form-check">
-                        {{project.name}}
                         <input class="form-check-input" type="checkbox" style="padding: 10px" value="" id="defaultCheck1">
                         <label class="form-check-label" for="defaultCheck1">
                           {{ project.name }}
